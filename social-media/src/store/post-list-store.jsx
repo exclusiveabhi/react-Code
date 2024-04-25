@@ -1,18 +1,40 @@
-import { createContext, useReducer } from "react";
+import React, { createContext, useReducer } from "react";
 
-const PostList = createContext({
-    postList: [],
-    addPost: () => {},
-    deletePost: () => {},
-  } );
-const postListReducer = (currentPostList , action)=>{
-    return currentPostList;
-}
+export const PostList = createContext({
+  postList: [],
+  addPost: () => {},
+  deletePost: () => {},
+}); 
+
+const DEFAULT_POST_LIST = [
+  {
+    id: '1',
+    title: 'Go to Dhampur',
+    body: 'ufsguhsgfuhzdfgjksdasfkahdsfkdfskaLDFAJdfjkdsjfg',
+    reaction: 0,
+    userId: '',
+    tag: ['vacation', 'dhampur']
+  },
+  {
+    id: '2',
+    title: 'Go to Moradabad',
+    body: 'ufsguhsgfuhzdfgjksdasfkahdsfkdfskaLDFAJdfjkdsjfg',
+    reaction: 0,
+    userId: '',
+    tag: ['vacation', 'moradabad']
+  }
+];
+
+const postListReducer = (currentPostList, action) => {
+  return currentPostList;
+};
+
 const addPost = () => {};
 const deletePost = () => {};
-const PostListProvider = ({children}) => {
-  const [postList, dispatchPostList] = useReducer(postListReducer, );
- 
+
+const PostListProvider = ({ children }) => {
+  const [postList, dispatchPostList] = useReducer(postListReducer, DEFAULT_POST_LIST);
+
   return (
     <PostList.Provider
       value={{
@@ -25,6 +47,5 @@ const PostListProvider = ({children}) => {
     </PostList.Provider>
   );
 };
-export default PostListProvider;
 
-//childern mai lo bhi data milega usko provider <PostList.Provider> iss mai wrap kr dega mtlb daal dega !
+export default PostListProvider;
