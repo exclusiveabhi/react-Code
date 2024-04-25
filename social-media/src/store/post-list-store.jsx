@@ -4,36 +4,53 @@ export const PostList = createContext({
   postList: [],
   addPost: () => {},
   deletePost: () => {},
-}); 
+});
 
 const DEFAULT_POST_LIST = [
   {
-    id: '1',
-    title: 'Go to Dhampur',
-    body: 'ufsguhsgfuhzdfgjksdasfkahdsfkdfskaLDFAJdfjkdsjfg',
+    id: "1",
+    title: "Go to Dhampur",
+    body: "ufsguhsgfuhzdfgjksdasfkahdsfkdfskaLDFAJdfjkdsjfg",
     reaction: 0,
-    userId: '',
-    tag: ['vacation', 'dhampur']
+    userId: "",
+    tag: ["vacation", "dhampur"],
   },
   {
-    id: '2',
-    title: 'Go to Moradabad',
-    body: 'ufsguhsgfuhzdfgjksdasfkahdsfkdfskaLDFAJdfjkdsjfg',
+    id: "2",
+    title: "Go to Moradabad",
+    body: "ufsguhsgfuhzdfgjksdasfkahdsfkdfskaLDFAJdfjkdsjfg",
     reaction: 0,
-    userId: '',
-    tag: ['vacation', 'moradabad']
-  }
+    userId: "",
+    tag: ["vacation", "moradabad"],
+  },
 ];
 
 const postListReducer = (currentPostList, action) => {
-  return currentPostList;
+  var newPostList = currentPostList;
+  if (action.type === "DELETE_POST") {
+    newPostList = currentPostList.filter(
+      (post) => post.id !== action.payload.postId
+    );
+  }
+  return newPostList;
 };
 
-const addPost = () => {};
-const deletePost = () => {};
-
 const PostListProvider = ({ children }) => {
-  const [postList, dispatchPostList] = useReducer(postListReducer, DEFAULT_POST_LIST);
+  const [postList, dispatchPostList] = useReducer(
+    postListReducer,
+    DEFAULT_POST_LIST
+  );
+const addPost = () => {};
+const deletePost = (postId) => {
+  // console.log(postId)
+  dispatchPostList({
+    type: "DELETE_POST",
+    payload: {
+      postId,
+    },
+  });
+};
+
 
   return (
     <PostList.Provider
