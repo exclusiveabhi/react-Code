@@ -33,3 +33,24 @@
 .copyright{
     margin-right: 400px;
 }
+ .form{
+   /* width: 170px; */
+    margin-left: 60px;
+    margin-top: 34px;
+ }
+ .htmlForm-control{
+    margin-left: 10px;
+    width: 20%;
+ }
+ .post-reaction{
+    width: 210px;
+ }
+ .title{
+    width: 242px;
+ }
+ .userId{
+    width: 257px;
+ }
+ .tags{
+    width: 242px;
+ }

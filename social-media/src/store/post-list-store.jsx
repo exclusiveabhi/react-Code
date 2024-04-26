@@ -32,6 +32,11 @@ const postListReducer = (currentPostList, action) => {
       (post) => post.id !== action.payload.postId
     );
   }
+  else if (action.type === "ADD_POST"){
+     newPostList = [action.payload, ...currentPostList]   // action.payload mai new post ka data aayega or 
+                                                          //current wale array mai add ho jayega !
+
+  }
   return newPostList;
 };
 
@@ -40,17 +45,29 @@ const PostListProvider = ({ children }) => {
     postListReducer,
     DEFAULT_POST_LIST
   );
-const addPost = () => {};
-const deletePost = (postId) => {
-  // console.log(postId)
-  dispatchPostList({
-    type: "DELETE_POST",
-    payload: {
-      postId,
-    },
-  });
-};
-
+  const addPost = (userId, postTitle, postBody, postTags, postReaction) => {
+    // console.log(userId)   yaha tak working value aarhi hai !
+    dispatchPostList({
+      type: "ADD_POST",
+      payload: {
+        id: Date.now(),
+        title: postTitle,
+        body: postBody,
+        reaction: postReaction,
+        userId: userId,
+        tag: postTags,
+      },
+    });
+  };
+  const deletePost = (postId) => {
+    // console.log(postId)
+    dispatchPostList({
+      type: "DELETE_POST",
+      payload: {
+        postId,
+      },
+    });
+  };
 
   return (
     <PostList.Provider

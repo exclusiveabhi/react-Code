@@ -43,7 +43,7 @@ const SideBar = ({ selectedTab, setSelectedTab }) => {
         <li
           onClick={() => {
             onClick("CreatePost");
-            console.log("bhaiyaaa post se hu");
+            // console.log("bhaiyaaa post se hu");
           }}
         >
           <a
