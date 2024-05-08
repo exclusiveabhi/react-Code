@@ -50,7 +50,7 @@ const PostListProvider = ({ children }) => {
     dispatchPostList({
       type: "ADD_POST",
       payload: {
-        id: Date.now(),
+        id: Date.now(),   //date as id that is unique !
         title: postTitle,
         body: postBody,
         reaction: postReaction,
