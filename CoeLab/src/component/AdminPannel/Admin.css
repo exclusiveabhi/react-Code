@@ -1,18 +1,105 @@
 /* .btn{
     margin-left: 500px;
 } */
-button.btn{
+/* Add these styles to your Admin.css file */
+/* Add these styles to your Admin.css file */
+.navbar1 {
+    background-color: rgb(17, 164, 17); /* Green background color */
+    width: 100%;
+  }
+  /* Add this style to your Admin.css file */
+.search-button {
+    background-color: rgb(17, 164, 17); /* Matches the navbar background color */
+    color: white; /* White text color for visibility */
+  }
+  
+  .navbar1 .navbar-brand,
+  .navbar1 .nav-link,
+  .navbar1 .dropdown-item {
+    color: white !important; /* Make the navbar text color white */
+  }
+  
+  .navbar1 .nav-link.disabled {
+    color: rgba(255, 255, 255, 0.5) !important; /* Make the disabled link slightly transparent */
+  }
+  
+  .container-fluid {
+    width: 100% !important  /* Ensures the container takes full width */
+  }
+  
+  .search {
+    width: 208px !important; /* Sets the width of the search input */
+    box-sizing: border-box;
+        /* Includes padding and border in the element's total width and height */
+  }
+  
+  .search-button {
+    background-color: rgb(17, 164, 17); /* Matches the navbar background color */
+    border: none; /* Removes border to blend with navbar */
+    color: white; /* White text for visibility */
+    margin-right: 671px;
+  }
+  .main{
+    height: 54px;
+  }
+  
+
+  
+
+
+  button.btn {
     border: 2px solid black;
     background-color: rgb(17, 164, 17);
-    margin-left: 70%;
+    margin-left: 64%;
     color: white;
-}
-button.btn:hover{
+  }
+  
+  button.btn:hover {
     border: 2px solid black;
     background-color: rgb(48, 132, 48);
-    margin-left: 70%;
     color: white;
-}
-.class{
+  }
+  
+
+/* .class{
     padding: 50px;
+} */
+.navbar1{
+    width: 100%;
+}
+/* .search{
+   border-radius: 8px;
+   width: 4px;
+} */
+.navo{
+    width: 100%;
+}
+/* .inputs{
+    width: 100%
+} */
+
+.inputs input {
+    width: 100%;
+    box-sizing: border-box; 
+  }
+  
+  .inputs div {
+    margin-bottom: 10px; 
+  }
+  .modal-footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .modal-footer button {
+    margin: 5px; /* Adjust margin as needed */
+  }
+  
+  /* Add these styles to your Admin.css file */
+
+/* Make search button responsive */
+@media (max-width: 767px) {
+  .search-button {
+    margin-right: 0; /* Remove the right margin on smaller screens */
+  }
 }

@@ -16,8 +16,11 @@ function Addbtn() {
         <h1 className="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
         <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
-      <div className="modal-body className">
-       <label>First Name:</label><br></br><input type='text' placeholder='Enter your First Name' className='fname'></input><br></br>
+      <div className="modal-body className inputs">
+        <div>
+       <label>First Name:</label><input type='text' placeholder='Enter your First Name' className='fname'></input><br></br>
+       </div>
+       <div></div>
        <label>Last Name:</label><br></br><input type='text' placeholder='Enter your Last Name' className='lname'></input><br></br>
        <label>Handle:</label><br></br><input type='text' placeholder='Enter your Handle' className='handle'></input>
       </div>

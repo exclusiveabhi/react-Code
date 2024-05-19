@@ -32,7 +32,7 @@ setError(error);
   };
   const loginapi=(value)=>{
     
-    if(value.email=="abhishek@gmail.com" && value.password ==123){
+    if(value.email ==="abhishek@gmail.com" && value.password === 123){
       alert("Login Successfully")
       navigate("/admin-panel")
     }else{
