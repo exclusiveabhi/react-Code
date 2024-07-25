@@ -1,6 +1,6 @@
 # React-Code Learning Repository
 
-Welcome to my React code learning repository! This repository is designed to help me learn React.js by implementing different concepts and features step by step. Below is a breakdown of the sequence of topics covered in this repository along with instructions on how to set up. !
+Welcome to my React code learning repository! This repository is designed to help me learn React.js by implementing different concepts and features step by step. Below is a breakdown of the sequence of topics covered in this repository along with instructions on how to set up !
 
 ## Topics Covered
 
